@@ -1,5 +1,8 @@
 # Twtter - Kafka - Elasticsearch(HDFS) - Kibana
 
+<div>
+ <img width="664" alt="스크린샷 2020-05-02 오후 7 08 09" src="https://user-images.githubusercontent.com/39682914/80861263-654a8b80-8ca8-11ea-8933-b71272fb5d47.png">
+ </div>
 * KAFKA
 
 bin/zookeeper-server-start.sh config/zookeeper.properties
