@@ -31,11 +31,9 @@ class TweetListener(StreamListener):
 				text = dict_data['text']
 			else:
 				text = None
-			#text = dict_data["retweeted_status"]['extended_tweet']['full_text'] if 'retweeted_status' in dict_data.keys() and 'extended_tweet' in dict_data["retweeted_status"].keys() and "full_text" in dict_data['retweeted_status']['extended_tweet'].keys() else dict_data['text']
 			dict_data['text'] = text
 			dict_data['keyword'] = self.keyword
 			dict_data['category'] = self.category
-			#dict_data['date'] = datetime.strptime(dict_data["created_at"], '%a %b %d %H:%M:%S %z %Y')
 			print("text : ", dict_data['text'], "keyword : ", dict_data['keyword'])
 			self.producer.produce(bytes(json.dumps(dict_data), 'ascii'))
 			return True
@@ -63,10 +61,8 @@ if __name__ == "__main__":
         if len(sys.argv) < 2:
                 print("Usage: PYSPARK_PYTHON=python3 /bin/spark-submit ex.py <YOUR WORD>", file=sys.stderr)
                 exit(-1)
-        #input = sys.argv[1:]
-        #keyword = ' '.join(input)
-        #print(keyword)
-        path = '/home/yeop/textlake/keyword/'
+
+        path = '~/'
         os.chdir(path)
         filename = sys.argv[1]
         with open(filename,newline='') as f:
