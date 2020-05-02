@@ -2,10 +2,12 @@
 
 # kafka
 bin/zookeeper-server-start.sh config/zookeeper.properties
+
 bin/kafka-server-start.sh config/server.properties
 
-+ add more broker
+# to add more broker
 bin/kafka-server-start.sh config/server-1.properties &
+
 bin/kafka-server-start.sh config/server-2.properties &
 
 # structured streaming  ->  elasticsearch
