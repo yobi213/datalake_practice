@@ -3,6 +3,7 @@
 <div>
  <img width="664" alt="스크린샷 2020-05-02 오후 7 08 09" src="https://user-images.githubusercontent.com/39682914/80861263-654a8b80-8ca8-11ea-8933-b71272fb5d47.png">
  </div>
+
 * KAFKA
 
 bin/zookeeper-server-start.sh config/zookeeper.properties
@@ -24,3 +25,10 @@ spark-submit --packages org.elasticsearch:elasticsearch-hadoop:6.4.3 hdfs_es.py
 * python
 
 python3 tproducer.py <filename>
+
+
+ 
+ #Kibana
+ <div>
+<img width="649" alt="스크린샷 2020-05-02 오후 7 06 20" src="https://user-images.githubusercontent.com/39682914/80861266-68de1280-8ca8-11ea-957c-ba6623f5a1c0.png">
+</div>
