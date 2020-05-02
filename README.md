@@ -22,4 +22,4 @@ spark-submit --packages org.elasticsearch:elasticsearch-hadoop:6.4.3 hdfs_es.py
 
 
 
-# python3 tproducer.py <filename>
+python3 tproducer.py <filename>
