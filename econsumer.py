@@ -56,11 +56,8 @@ if __name__ == "__main__":
 	sdf2 = sdf.withColumn('sentiment', pudf_sentiment(col('text')))
 	df = sdf2.withColumn('created_at', to_timestamp(sdf2.created_at, 'EEE MMM dd k:m:s z yyyy'))
 
-	#df = sdf2.withColumn('created_at',from_unixtime(unix_timestamp("created_at",'EEE MMM dd k:m:s z yyyy')).cast("timestamp"))
-	#query = df.writeStream.format("console").start()
-	####save to elasticsearch : spark 2.2
-	#query = df.writeStream.option("es.nodes","172.16.164.230").option("checkpointLocation","textlake/ES_checkpoint").format("org.elasticsearch.spark.sql").start("twitter/doc")
-	query = df.writeStream.option("es.nodes","172.16.164.230").option("checkpointLocation","textlake/ES_checkpoint").format("org.elasticsearch.spark.sql").trigger(continuous="1 seconds").start("twitter/doc")
+	#write your own address
+	query = df.writeStream.option("es.nodes","***.**.***.***").option("checkpointLocation","textlake/ES_checkpoint").format("org.elasticsearch.spark.sql").trigger(continuous="1 seconds").start("twitter/doc")
 
 	query.awaitTermination()
 
