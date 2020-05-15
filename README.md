@@ -1,5 +1,9 @@
 # Twtter - Kafka - Elasticsearch(HDFS) - Kibana
 
+
+[실시간 스트리밍 텍스트 데이터 분석 시스템 설계](http://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE08003264)
+
+
 <div>
  <img width="664" alt="스크린샷 2020-05-02 오후 7 08 09" src="https://user-images.githubusercontent.com/39682914/80861263-654a8b80-8ca8-11ea-8933-b71272fb5d47.png">
  </div>
