@@ -26,7 +26,7 @@ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.1.1 hconsum
 
 spark-submit --packages org.elasticsearch:elasticsearch-hadoop:6.4.3 hdfs_es.py
 
-* python
+* twitter -> kafka
 
 python3 tproducer.py <filename>
 
